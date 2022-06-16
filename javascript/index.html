@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    
+
+    <div><nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav></div> <center> <h1>Marksheet</h1></center>
+
+
+
+      <div class="card" style="width: 40rem"><form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Maths</label>
+          <input type="text" class="form-control" id="maths" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">the marks of your exams..</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Phy</label>
+            <input type="text" class="form-control" id="phy" aria-describedby="emailHelp">
+            <div id="phy" class="form-text">the marks of your exams.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Eng</label>
+            <input type="text" class="form-control" id="eng" aria-describedby="emailHelp">
+            <div id="eng" class="form-text">the marks of your exams.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Chemistry</label>
+            <input type="text" class="form-control" id="chm" aria-describedby="emailHelp">
+            <div id="chm" class="form-text">the marks of your exams.</div>
+          </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Urdu</label>
+          <input type="text" class="form-control" id="urdu">
+          <div id="chm" class="form-text">the marks of your exams.</div>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check</label>
+        </div>
+        <button type="submit" onclick="result()" class="btn btn-primary">Submit</button>
+      </form></div>
+
+      <script>
+function result(){
+    
+    var maths= document.getElementById('maths');
+    var phy= document.getElementById('phy');
+    var eng= document.getElementById('eng');
+    var chm= document.getElementById('chm');
+    var urdu= document.getElementById('urdu');
+    
+    var sumofmarks=parseInt(maths.value)+parseInt(phy.value)+
+    parseInt(eng.value)+parseInt(chm.value)+ 
+    parseInt(urdu.value);
+    var perc=(sumofmarks/500)*100;
+    document.write("<h1> The sum of total marks "+sumofmarks+"</h1>");
+    document.write("<h1> The percentage is "+perc+"</h1>");
+
+
+
+
+if(perc>80){
+  document.write("<h1>A1 by help of Leak PAPERS</h1>");}
+
+ else if(perc>70){
+    document.write("<h1>A</h1>");}
+
+   else if(perc>60){
+      document.write("<h1>B</h1>");}
+
+      else if (perc<60){
+        document.write("<h1>fail</h1>");
+      }
+}
+
+
+
+      </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
